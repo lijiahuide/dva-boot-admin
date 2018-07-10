@@ -61,6 +61,7 @@ $ npm start
 ```
 
 ## Change log
+- test
 - 增加Gallery示例页面，在页面>画廊下
 - 增加LazyLoad（懒加载）组件与WaterFall（瀑布流）组件
 - 增加ModalTable & Button
