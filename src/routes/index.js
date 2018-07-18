@@ -1,11 +1,15 @@
 import {createRoutes} from '@/utils/core';
-import BaseLayout from '@/layouts/BasicLayout';
+import BasicLayout from '@/layouts/BasicLayout';
+// import CardLayout from '@/layouts/CardLayout';
 import UserLayout from '@/layouts/UserLayout';
 import NotFound from './Pages/404';
 import ScreenLock from './Pages/ScreenLock';
+import Page500 from './Pages/500';
 import Coming from './Pages/Coming';
 import Gallery from './Pages/Gallery';
+import Result from './Pages/Result';
 import Login from './Login';
+import Register from './Register';
 import Dashboard from './Dashboard';
 import Blank from './Blank';
 import Toolbar from './Widgets/Toolbar';
@@ -32,12 +36,13 @@ const routesConfig = (app) => ([
     component: UserLayout,
     childRoutes: [
       Login(app),
+      Register(app),
       NotFound()
     ]
   }, {
     path: '/',
     title: '系统中心',
-    component: BaseLayout,
+    component: BasicLayout,
     indexRoute: '/dashboard',
     childRoutes: [
       Dashboard(app),
@@ -60,6 +65,8 @@ const routesConfig = (app) => ([
       Coming(),
       ScreenLock(),
       Gallery(),
+      Result(),
+      Page500(),
       NotFound(),
     ]
   }
